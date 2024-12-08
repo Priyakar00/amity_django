@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+</head>
+<body>
+	<h2><a href="show">Insert</a> </h2>
+	<!-- table ta pore banabe -->
+	<table border="1">
+		<tr>
+			<th>Roll</th>
+			<th>Name</th>
+			<th>Course</th>
+			<th>Marks</th>
+		</tr>
+		{% for i in data %}
+		<tr>
+			<td>{{i.roll}} </td>
+			<td>{{i.name}} </td>
+			<td>{{i.course}} </td>
+			<td>{{i.marks}} </td>
+			<td><a href="update/{{i.roll}}">Update</a> </td>
+			<td><a href="delete/{{i.roll}}">Delete</a> </td>
+			
+		</tr>
+		{% endfor %}
+	</table>
+
+</body>
+</html>
