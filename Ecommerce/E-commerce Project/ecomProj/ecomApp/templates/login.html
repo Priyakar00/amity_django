@@ -1,0 +1,42 @@
+{% extends 'default_page.html' %}
+{% load static %}
+{% block 'slider' %}
+
+ <section id="inner-headline">
+	<div class="container">
+		<div class="row">
+			<div class="col-lg-12">
+				<h2 class="pageTitle">Log In</h2>
+			</div>
+		</div>
+	</div>
+</section>
+
+<section>
+	<center>
+	<h2 style="color:darkred">{{msg1}}</h2>
+	</center>
+	<form action="UserName" method="post">{% csrf_token %}
+		<center>
+			<div style="width:300px;padding-left:10px;">
+				<table height="200px" width="200px" bgcolor="red">
+					<tr>
+						<td><input type="text" name="usernam" placeholder="Enter Your Username" class="form-control"></td>	
+					</tr>
+					<tr>
+						<td><input type="password" name="passwor" placeholder="Enter Your Password" class="form-control"></td>
+					</tr>
+					<tr>
+						<td>
+						&nbsp&nbsp&nbsp<button type="submit" class="btn">LOGIN</button>
+						<button type="reset" class="btn">RESET</button>
+						</td>
+					</tr>
+				</table>
+			</div>
+		</center>
+	</form>
+	<br><br>
+</section>
+
+{% endblock %}
